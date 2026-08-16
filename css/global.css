@@ -479,3 +479,28 @@ body.dark-mode .students-table td.name-col,
 body.dark-mode .courses-table td.name-col {
     color: #38bdf8 !important; /* Lighter blue for dark mode */
 }
+
+/* =========================================================================
+   FORM VALIDATION STYLES
+   ========================================================================= */
+.error-message {
+    color: #e53e3e; /* Red color */
+    font-size: 0.8rem; /* Smaller font size */
+    margin-top: 4px;
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+body.dark-mode .error-message {
+    color: #fc8181; /* Lighter red for dark mode */
+}
+
+.input-error-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
