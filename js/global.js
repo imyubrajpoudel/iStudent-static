@@ -88,34 +88,86 @@ document.addEventListener('DOMContentLoaded', () => {
 // Global Form Validation Utility
 window.validateForm = function (formElement) {
     let isValid = true;
-    let errorMessages = [];
 
-    // Basic validation for required fields
+    // Clear previous dynamic error messages
+    const existingErrors = formElement.querySelectorAll('.error-message');
+    existingErrors.forEach(err => err.remove());
+
     const inputs = formElement.querySelectorAll('input, textarea, select');
     inputs.forEach(input => {
         // Reset styles
         input.style.borderColor = '';
+        let inputError = '';
 
+        // Basic validation for required fields
         if (input.hasAttribute('required') && !input.value.trim()) {
             isValid = false;
-            input.style.borderColor = 'red';
-            errorMessages.push(`${input.placeholder || input.name || 'Field'} is required.`);
+            input.style.borderColor = '#e53e3e';
+            inputError = `${input.placeholder || input.name || 'This field'} is required.`;
+        }
+
+        // Specific field validation based on type or name/placeholder
+        const nameKeywords = ['name', 'username', 'first', 'last'];
+        const isNameField = nameKeywords.some(keyword => (input.name && input.name.toLowerCase().includes(keyword)) || (input.placeholder && input.placeholder.toLowerCase().includes(keyword)));
+        
+        if (isNameField && input.value.trim() && !inputError) {
+            if (input.value.trim().length <= 1) {
+                isValid = false;
+                input.style.borderColor = '#e53e3e';
+                inputError = 'Name must be more than 1 character.';
+            } else if (/^\d+$/.test(input.value.trim())) {
+                isValid = false;
+                input.style.borderColor = '#e53e3e';
+                inputError = 'Name cannot be numbers only.';
+            }
         }
 
         // Advanced Password validation
-        if (input.type === 'password' && input.value) {
-            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (input.type === 'password' && input.value && !inputError) {
+            // 1 Upper, 1 Lower, 8+ chars
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
             if (!passwordRegex.test(input.value)) {
                 isValid = false;
-                input.style.borderColor = 'red';
-                errorMessages.push(`Password must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character.`);
+                input.style.borderColor = '#e53e3e';
+                inputError = 'Password must be at least 8 characters long, contain 1 uppercase and 1 lowercase letter.';
+            }
+        }
+
+        // Email validation
+        if (input.type === 'email' && input.value && !inputError) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(input.value)) {
+                isValid = false;
+                input.style.borderColor = '#e53e3e';
+                inputError = 'Please enter a valid email address.';
+            }
+        }
+
+        if (inputError) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.innerText = inputError;
+
+            // Wrap input in a relative container if it's not already wrapped to prevent layout breaks (especially in flex/grid)
+            if (!input.parentNode.classList.contains('input-error-wrapper')) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'input-error-wrapper';
+                // Copy flex property if parent is a flex container
+                const parentStyle = window.getComputedStyle(input.parentNode);
+                if (parentStyle.display === 'flex') {
+                     const inputStyle = window.getComputedStyle(input);
+                     wrapper.style.flex = inputStyle.flex;
+                }
+                
+                // For nested inputs in some structures, this helps keep things intact
+                input.parentNode.insertBefore(wrapper, input);
+                wrapper.appendChild(input);
+                wrapper.appendChild(errorDiv);
+            } else {
+                input.parentNode.appendChild(errorDiv);
             }
         }
     });
-
-    if (!isValid && errorMessages.length > 0) {
-        alert(errorMessages.join('\\n'));
-    }
 
     return isValid;
 };
