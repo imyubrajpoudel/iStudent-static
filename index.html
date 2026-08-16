@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>iStudent - Student Management System</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--secondary-color); font-size: 24px;"></i>
+                </div>
+                <span>iStudent</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="courses.html">Courses</a>
+                <a href="contact.html">Contact</a>
+                <div class="auth-links" id="authLinks">
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Enhance Your Future With iStudent</h1>
+            <p>Empower your educational journey with our comprehensive platform. Manage your learning, access top-tier
+                courses, and track your academic progress all in one unified portal.</p>
+            <div class="hero-btns">
+                <a href="about.html" class="btn btn-primary">Learn More</a>
+                <a href="courses.html" class="btn btn-accent">Visit Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Awesome Features</h2>
+                <p>Everything you need to succeed academically and professionally.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Scholarship Facility</h3>
+                    <p>Access exclusive financial aid opportunities and scholarship programs designed to support
+                        dedicated students.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Online Courses</h3>
+                    <p>Learn from industry experts with our extensive library of interactive, self-paced online courses.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>Global Certification</h3>
+                    <p>Earn internationally recognized certificates that validate your skills and boost your career
+                        prospects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section class="popular-courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Courses on Demand</h2>
+                <p>Discover our most courses chosen by thousands of students worldwide.</p>
+            </div>
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Javascript Course">
+                        <div class="price">$99.99</div>
+                    </div>
+                    <div class="course-content">
+                        <span class="update-date">Updated: 2024/01/02</span>
+                        <h3>Javascript Beginners Course</h3>
+                        <div class="course-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(132)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="CSS Course">
+                        <div class="price">$49.00</div>
+                    </div>
+                    <div class="course-content">
+                        <span class="update-date">Updated: 2024/01/02</span>
+                        <h3>CSS Beginners Course</h3>
+                        <div class="course-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span>(112)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Python Course">
+                        <div class="price">$69.99</div>
+                    </div>
+                    <div class="course-content">
+                        <span class="update-date">Updated: 2024/01/02</span>
+                        <h3>Python Beginners Course</h3>
+                        <div class="course-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(89)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscribe Section -->
+    <section class="register">
+        <div class="container register-container">
+            <div class="register-text">
+                <span class="subtitle">Stay updated with the latest news</span>
+                <h2>Subscribe to our Newsletter</h2>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 20px; color: #e2e8f0; max-width: 450px;">
+                    Join our community of over 10,000 students. Get weekly updates on new courses, scholarships, and
+                    tips for your academic success directly in your inbox.
+                </p>
+            </div>
+            <div class="register-form">
+                <h3>Subscribe Now!</h3>
+                <form id="homeSubscribeForm">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit" class="btn btn-accent"
+                        style="width: 100%; margin-top: 10px;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experts Section -->
+    <section class="experts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Community Experts</h2>
+                <p>Learn directly from experienced practitioners and industry leaders.</p>
+            </div>
+            <div class="experts-grid">
+                <div class="expert-card">
+                    <img src="./images/my_pp.jpg" alt="Yubraj Poudel">
+                    <h3>Yubraj Poudel</h3>
+                    <span class="role">Web Developer</span>
+                    <div class="expert-socials">
+                        <a href="https://www.facebook.com/iamyubrajpoudel" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/iamyubrajpoudel/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/iamyubrajpoudel/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <img src="./images/jaya_pp.jpg" alt="Jaya Poudel">
+                    <h3>Jaya Poudel</h3>
+                    <span class="role">Business Analyst</span>
+                    <div class="expert-socials">
+                        <a href="https://www.facebook.com/iamyubrajpoudel" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/iamyubrajpoudel/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/iamyubrajpoudel/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Yogesh Bhattarai">
+                    <h3>Yogesh Bhattarai</h3>
+                    <span class="role">Project Manager</span>
+                    <div class="expert-socials">
+                        <a href="https://www.facebook.com/iamyubrajpoudel" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/iamyubrajpoudel/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/iamyubrajpoudel/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Top Categories</h4>
+                    <ul>
+                        <li><a href="#">Computer Science</a></li>
+                        <li><a href="#">Business & Finance</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Design & Arts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="courses.html">Browse Courses</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="students.html">Student Records</a></li>
+                        <li><a href="#">Progress Tracking</a></li>
+                        <li><a href="#">Interactive Learning</a></li>
+                        <li><a href="#">Global Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="blogs.html">Career Guides</a></li>
+                        <li><a href="#">Instructor Network</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">You can trust us, we only send promo offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2026 iStudent. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/iamyubrajpoudel" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/iamyubrajpoudel/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/iamyubrajpoudel/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

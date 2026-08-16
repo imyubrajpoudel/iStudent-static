@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Add Student - iStudent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/addstudent.css">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--secondary-color); font-size: 24px;"></i>
+                </div>
+                <span>iStudent</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="courses.html">Courses</a>
+                <a href="contact.html">Contact</a>
+                <div class="auth-links" id="authLinks">
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Layout Wrapper -->
+    <div class="dashboard-wrapper">
+
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>iStudent</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="addstudent.html" class="active"><i class="fa-solid fa-user-plus"></i> Add Student</a></li>
+                <li><a href="students.html"><i class="fa-solid fa-users"></i> Students</a></li>
+                <li><a href="addcourse.html"><i class="fa-solid fa-book-open"></i> Add Course</a></li>
+                <li><a href="courses.html"><i class="fa-solid fa-list"></i> Courses</a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li class="settings-menu">
+                    <a href="#" id="settingsToggle" style="display: flex; align-items: center;"><i
+                            class="fa-solid fa-gear"></i> Settings <i class="fa-solid fa-chevron-down"
+                            style="margin-left: auto; font-size: 0.8rem;"></i></a>
+                    <ul class="submenu" id="settingsSubmenu"
+                        style="display: none; padding-left: 20px; list-style: none;">
+                        <li>
+                            <a href="#" id="darkModeToggleMenu"
+                                style="display: flex; justify-content: space-between; align-items: center;">
+                                <span><i class="fa-solid fa-moon"></i> Dark Mode</span>
+                                <label class="theme-switch" onclick="event.stopPropagation()">
+                                    <input type="checkbox" id="darkModeCheckbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="logout-item"><a href="#" id="sidebarLogout"><i class="fa-solid fa-right-from-bracket"></i>
+                        Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Top bar -->
+            <div class="dashboard-topbar">
+                <h2>Student Management System</h2>
+                <div class="welcome-text">
+                    Welcome, <a href="profile.html" style="color: var(--secondary-color); text-decoration: none;"><span
+                            id="welcomeUserName">User</span></a>
+                </div>
+            </div>
+
+            <!-- Add Student Form Area -->
+            <div class="add-student-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-user-plus"></i> Add Student
+                </div>
+
+                <form id="addStudentForm" class="student-form">
+                    <div class="form-group">
+                        <input type="text" id="studentId" placeholder="Student ID (e.g. 20037868)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="age" placeholder="Age" required min="10" max="100">
+                    </div>
+                    <div class="form-group">
+                        <select id="course" required>
+                            <option value="" disabled selected>Select Faculty</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Business Management">Business Management</option>
+                            <option value="Supply Chain Management">Supply Chain Management</option>
+                            <option value="Computer Science">Computer Science</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-save">Save Student</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="js/global.js"></script>
+    <script src="js/addstudent.js"></script>
+</body>
+
+</html>

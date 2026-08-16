@@ -1,0 +1,118 @@
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.profile-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: var(--shadow-md);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-bg);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.profile-info-display {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile-avatar {
+    font-size: 5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.profile-info-display h3 {
+    font-size: 1.5rem;
+    color: var(--dark-bg);
+    margin-bottom: 15px;
+}
+
+.profile-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.profile-form .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.profile-form input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-save {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-save:hover {
+    background-color: var(--secondary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.form-msg {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+.form-msg.success {
+    color: #38a169;
+}
+
+.form-msg.error {
+    color: #e53e3e;
+}

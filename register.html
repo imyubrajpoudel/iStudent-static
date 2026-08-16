@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Register - iStudent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--secondary-color); font-size: 24px;"></i>
+                </div>
+                <span>iStudent</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="courses.html">Courses</a>
+                <a href="contact.html">Contact</a>
+                <div class="auth-links" id="authLinks">
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Auth Background -->
+    <div class="auth-bg">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fa-solid fa-user-plus auth-icon"></i>
+                <h2>Register</h2>
+                <h3>Create Account</h3>
+                <p>Register to gain secure access to the Student Management System. Your details will be used to
+                    personalize your profile and manage system access.</p>
+            </div>
+
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="regName" placeholder="Institution Name (e.g.  King's Own Institute)"
+                        required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="regEmail" placeholder="Email (e.g. koi@gmail.com)" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="regUsername" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="regPassword" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+                </div>
+
+                <div id="regError" class="error-msg"></div>
+
+                <button type="submit" class="btn-auth">
+                    <i class="fa-solid fa-user-plus"></i> Create Account
+                </button>
+
+                <div class="auth-footer">
+                    Already registered? <a href="login.html">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Top Categories</h4>
+                    <ul>
+                        <li><a href="#">Computer Science</a></li>
+                        <li><a href="#">Business & Finance</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Design & Arts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="courses.html">Browse Courses</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="students.html">Student Records</a></li>
+                        <li><a href="#">Progress Tracking</a></li>
+                        <li><a href="#">Interactive Learning</a></li>
+                        <li><a href="#">Global Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community Forums</a></li>
+                        <li><a href="blogs.html">Career Guides</a></li>
+                        <li><a href="#">Instructor Network</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">You can trust us, we only send promo offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2026 iStudent. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/iamyubrajpoudel" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/iamyubrajpoudel/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/iamyubrajpoudel/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>
